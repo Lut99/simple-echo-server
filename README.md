@@ -18,7 +18,7 @@ git clone https://github.com/Lut99/simple-echo-server
 
 ```sh
 
-cd simple-echo-server-rust
+cd simple-echo-server
 ```
 
 3. Build the project:
@@ -32,7 +32,7 @@ cargo build --release
 
 ```sh
 
-cargo run --release
+cargo run --release -- 8080
 ```
 
 The server will start listening on `localhost:8080`.
@@ -43,10 +43,9 @@ Test the server:
 
 ```sh
 
-curl -X POST -H "Content-Type: application/json" -d '{"message":"hello world"}' http://localhost:8080/echo
+netcat localhost 8080
 ```
 
-You should see the response **{"message":"hello world"}**.
 
  ## License
 This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](./LICENSE) file for details.
