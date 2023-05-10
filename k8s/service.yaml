@@ -1,0 +1,23 @@
+# SERVICE.yaml for the `simple-echo-server`
+#   by Lut99
+# 
+# Defines a service file for the simple-echo-server on Kubernetes.
+# 
+# Tested on v1.23.0.
+# 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-echo-server-service
+  labels:
+    app: simple-echo-server
+spec:
+  selector:
+    app: simple-echo-server
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 80

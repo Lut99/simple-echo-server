@@ -1,9 +1,10 @@
 [package]
 name = "simple-echo-server"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "A very simple echo server that replies to the client the same thing as given. The only reason that this exists is to a server that we know does not do weird things."
 authors = [ "Lut99" ]
+
 
 [dependencies]
 clap     = { version = "4.1.6", features = ["derive"] }
@@ -11,3 +12,8 @@ futures  = "0.3.26"
 humanlog = { git = "https://github.com/Lut99/humanlog-rs" }
 log      = "0.4.17"
 tokio    = { version = "1.26.0", features = ["macros", "net", "rt"] }
+warp     = { version = "0.3", optional = true }
+
+
+[features]
+http = [ "dep:warp" ]

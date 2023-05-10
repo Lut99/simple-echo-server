@@ -1,0 +1,29 @@
+# DEPLOYMENT.yaml for the `simple-echo-server`
+#   by Lut99
+# 
+# Defines a deployment file for the simple-echo-server on Kubernetes.
+# 
+# Tested on v1.23.0.
+# 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-echo-server-deployment
+  labels:
+    app: simple-echo-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-echo-server
+  template:
+    metadata:
+      labels:
+        app: simple-echo-server
+    spec:
+      containers:
+      - name: simple-echo-server
+        image: simple-echo-server:latest
+        ports:
+        - containerPort: 80
