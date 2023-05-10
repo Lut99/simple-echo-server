@@ -7,7 +7,7 @@ Its basic use-case is for testing network connectivity in various scenario's. To
 
 In addition, the project includes files to run the executable in [Docker](https://docker.com) and [Kubernetes](https://kubernetes.io).
 
-Note that a precompiled version of the executable is available in the [releases page](https://github.com/Lut99/simple-echo-server/releases/latest) and on [DockerHub]().
+Note that a precompiled version of the executable is available in the [releases page](https://github.com/Lut99/simple-echo-server/releases/latest) and on [Docker Hub](https://hub.docker.com/repository/docker/lut99/simple-echo-server).
 
 
 ## Requirements
