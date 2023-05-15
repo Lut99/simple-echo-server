@@ -24,6 +24,6 @@ spec:
     spec:
       containers:
       - name: simple-echo-server
-        image: simple-echo-server:latest
+        image: lut99/simple-echo-server:latest
         ports:
         - containerPort: 80
